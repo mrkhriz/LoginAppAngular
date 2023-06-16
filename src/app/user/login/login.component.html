@@ -1,0 +1,19 @@
+<!-- <p>login works!</p> -->
+<h1>Iniciar sesión</h1>
+<form (ngSubmit)="login()" #loginForm="ngForm">
+    <!-- <div>
+        <label for="">usuario</label>
+        <input type="text" [(ngModel)]="">
+    </div> -->
+    <div>
+        <label for="">correo</label>
+        <input type="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div>
+        <label for="">Contraseña</label>
+        <input type="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" [disabled]="!loginForm.form.valid">
+        Iniciar sesion
+    </button>
+</form>
